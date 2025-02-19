@@ -12,26 +12,33 @@ struct ContentView: View {
 	// MARK: - Properties
 	// is @StateObject so the view can be notified everytime @Published variables are updated
 	@StateObject var locationManager = LocationManager()
+	@State var weather: ResponseBody?
+	var weatherManager = WeatherManager()
 	
 	
 	// MARK: - View Body
     var body: some View {
 		
         VStack {
-			
 			// testing location coordinate fetch
 			if let location = locationManager.location {
 				
-				Text("Your location coordinates are: \(location.longitude), \(location.latitude)")
-				
-			} else {
-				
-				if locationManager.isLoading {
-					
-					LoadingView()
-					
+				if let weather = weather {
+					WeatherView(weather: weather)
 				} else {
-					
+					LoadingView()
+						.task {
+							do {
+								weather = try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+							} catch {
+								print("Error fetching weather: \(error)")
+							}
+						}
+				}
+			} else {
+				if locationManager.isLoading {
+					LoadingView()
+				} else {
 					WelcomeView()
 						.environmentObject(locationManager)
 				}

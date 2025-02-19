@@ -15,6 +15,10 @@
 		647488852D662A3C006AF946 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647488842D662A3C006AF946 /* WelcomeView.swift */; };
 		647488872D663CDD006AF946 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647488862D663CDD006AF946 /* LoadingView.swift */; };
 		647488892D66401F006AF946 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647488882D66401F006AF946 /* WeatherManager.swift */; };
+		6474888B2D668106006AF946 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474888A2D668106006AF946 /* WeatherView.swift */; };
+		6474888D2D668128006AF946 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474888C2D668128006AF946 /* ModelData.swift */; };
+		6474888F2D6682ED006AF946 /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 6474888E2D6682ED006AF946 /* weatherData.json */; };
+		647488912D6683D4006AF946 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647488902D6683D4006AF946 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		647488842D662A3C006AF946 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		647488862D663CDD006AF946 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		647488882D66401F006AF946 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		6474888A2D668106006AF946 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		6474888C2D668128006AF946 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		6474888E2D6682ED006AF946 /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
+		647488902D6683D4006AF946 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				6474886A2D662006006AF946 /* Preview Assets.xcassets */,
+				6474888C2D668128006AF946 /* ModelData.swift */,
+				6474888E2D6682ED006AF946 /* weatherData.json */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -90,6 +100,7 @@
 		6474887D2D66234C006AF946 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				647488902D6683D4006AF946 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 			children = (
 				647488842D662A3C006AF946 /* WelcomeView.swift */,
 				647488862D663CDD006AF946 /* LoadingView.swift */,
+				6474888A2D668106006AF946 /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				647488702D662006006AF946 /* Preview Assets.xcassets in Resources */,
+				6474888F2D6682ED006AF946 /* weatherData.json in Resources */,
 				647488712D662006006AF946 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,10 +206,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				647488892D66401F006AF946 /* WeatherManager.swift in Sources */,
+				647488912D6683D4006AF946 /* Extensions.swift in Sources */,
 				647488782D662035006AF946 /* ContentView.swift in Sources */,
 				647488792D662035006AF946 /* weatherGoBrrrrApp.swift in Sources */,
 				647488832D662802006AF946 /* LocationManager.swift in Sources */,
 				647488872D663CDD006AF946 /* LoadingView.swift in Sources */,
+				6474888D2D668128006AF946 /* ModelData.swift in Sources */,
+				6474888B2D668106006AF946 /* WeatherView.swift in Sources */,
 				647488852D662A3C006AF946 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

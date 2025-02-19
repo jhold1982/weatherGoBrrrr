@@ -10,22 +10,17 @@ import CoreLocation
 
 class WeatherManager {
 	
-	// accepts two arguments, is asynchronous, and may throw errors
+	// HTTP request to get the current weather depending on the coordinates we got from LocationManager
 	func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
-			
-		guard let url = URL(
-			string: "https://api.openweathermap.org/data/2.5/weather?lat={\(latitude)}&lon={\(longitude)}&appid=\("198ec0dc5e78d9eff4ac6655ca69d557")&units=metric"
-		) else {
-			fatalError("ERROR: Missing URL.")
+		// Replace YOUR_API_KEY in the link below with your own
+		guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=198ec0dc5e78d9eff4ac6655ca69d557&units=metric") else { fatalError("Error: Missing URL.")
 		}
 		
 		let urlRequest = URLRequest(url: url)
 		
 		let (data, response) = try await URLSession.shared.data(for: urlRequest)
 		
-		guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-			fatalError("ERROR: Failed to fetch weather data.")
-		}
+		guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
 		
 		let decodedData = try JSONDecoder().decode(ResponseBody.self, from: data)
 		
@@ -35,25 +30,24 @@ class WeatherManager {
 
 // Model of the response body we get from calling the OpenWeather API
 struct ResponseBody: Decodable {
-	var coords: CoordinatesResponse
+	var coord: CoordinatesResponse
 	var weather: [WeatherResponse]
 	var main: MainResponse
 	var name: String
 	var wind: WindResponse
-	
+
 	struct CoordinatesResponse: Decodable {
-		var lat: Double
 		var lon: Double
+		var lat: Double
 	}
-	
+
 	struct WeatherResponse: Decodable {
 		var id: Double
 		var main: String
 		var description: String
 		var icon: String
-		
 	}
-	
+
 	struct MainResponse: Decodable {
 		var temp: Double
 		var feels_like: Double
