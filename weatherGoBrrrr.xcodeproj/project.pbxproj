@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		647488702D662006006AF946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6474886A2D662006006AF946 /* Preview Assets.xcassets */; };
+		647488712D662006006AF946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6474886C2D662006006AF946 /* Assets.xcassets */; };
+		647488782D662035006AF946 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647488752D662035006AF946 /* ContentView.swift */; };
+		647488792D662035006AF946 /* weatherGoBrrrrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647488762D662035006AF946 /* weatherGoBrrrrApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		647488592D661F9E006AF946 /* weatherGoBrrrr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherGoBrrrr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6474886A2D662006006AF946 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6474886C2D662006006AF946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		647488752D662035006AF946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		647488762D662035006AF946 /* weatherGoBrrrrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherGoBrrrrApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		6474885B2D661F9E006AF946 /* weatherGoBrrrr */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = weatherGoBrrrr;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		647488562D661F9E006AF946 /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		647488502D661F9E006AF946 = {
 			isa = PBXGroup;
 			children = (
-				6474885B2D661F9E006AF946 /* weatherGoBrrrr */,
+				6474886F2D662006006AF946 /* weatherGoBrrrr */,
 				6474885A2D661F9E006AF946 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,65 @@
 				647488592D661F9E006AF946 /* weatherGoBrrrr.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6474886B2D662006006AF946 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6474886A2D662006006AF946 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6474886F2D662006006AF946 /* weatherGoBrrrr */ = {
+			isa = PBXGroup;
+			children = (
+				647488772D662035006AF946 /* Primary */,
+				6474887F2D662351006AF946 /* Views */,
+				6474887E2D66234E006AF946 /* Data Managers */,
+				647488812D6626AB006AF946 /* Components */,
+				6474887D2D66234C006AF946 /* Extensions */,
+				6474886C2D662006006AF946 /* Assets.xcassets */,
+				6474886B2D662006006AF946 /* Preview Content */,
+			);
+			path = weatherGoBrrrr;
+			sourceTree = "<group>";
+		};
+		647488772D662035006AF946 /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				647488762D662035006AF946 /* weatherGoBrrrrApp.swift */,
+				647488752D662035006AF946 /* ContentView.swift */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		6474887D2D66234C006AF946 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6474887E2D66234E006AF946 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		6474887F2D662351006AF946 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		647488812D6626AB006AF946 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +121,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				6474885B2D661F9E006AF946 /* weatherGoBrrrr */,
 			);
 			name = weatherGoBrrrr;
 			packageProductDependencies = (
@@ -109,6 +168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647488702D662006006AF946 /* Preview Assets.xcassets in Resources */,
+				647488712D662006006AF946 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647488782D662035006AF946 /* ContentView.swift in Sources */,
+				647488792D662035006AF946 /* weatherGoBrrrrApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,11 +318,13 @@
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -267,9 +332,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.weatherGoBrrrr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -284,11 +353,13 @@
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,9 +367,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.weatherGoBrrrr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

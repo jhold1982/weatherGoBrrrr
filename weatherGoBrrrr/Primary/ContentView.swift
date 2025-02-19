@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+	
+	// MARK: - Properties
+	
+	
+	
+	// MARK: - View Body
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -17,6 +23,12 @@ struct ContentView: View {
         }
         .padding()
     }
+	
+	// MARK: - Functions
+	/// This is an empty function. It does NOTHING
+	func emptyFunc() {
+		// Intentionally Left Blank
+	}
 }
 
 #Preview {
