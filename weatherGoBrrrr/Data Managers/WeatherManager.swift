@@ -15,15 +15,10 @@ class WeatherManager {
 		// Replace YOUR_API_KEY in the link below with your own
 		guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=198ec0dc5e78d9eff4ac6655ca69d557&units=metric") else { fatalError("Error: Missing URL.")
 		}
-		
 		let urlRequest = URLRequest(url: url)
-		
 		let (data, response) = try await URLSession.shared.data(for: urlRequest)
-		
 		guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
-		
 		let decodedData = try JSONDecoder().decode(ResponseBody.self, from: data)
-		
 		return decodedData
 	}
 }
