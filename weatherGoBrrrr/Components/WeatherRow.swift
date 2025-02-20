@@ -14,8 +14,6 @@ struct WeatherRow: View {
 	var name: String
 	var value: String
 	
-	
-	
 	// MARK: - View Body
     var body: some View {
         

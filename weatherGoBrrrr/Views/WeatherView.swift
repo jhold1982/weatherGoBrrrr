@@ -40,8 +40,10 @@ struct WeatherView: View {
 							.fontWeight(.bold)
 							.padding()
 					}
+					
 					Spacer()
 						.frame(height: 80)
+					
 					AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
 						image
 							.resizable()
@@ -56,6 +58,7 @@ struct WeatherView: View {
 			}
 			.padding()
 			.frame(maxWidth: .infinity, alignment: .leading)
+			
 			VStack {
 				Spacer()
 				VStack(alignment: .leading, spacing: 20) {
@@ -93,7 +96,7 @@ struct WeatherView: View {
 				}
 				.frame(maxWidth: .infinity, alignment: .leading)
 				.padding()
-				.padding(.bottom, 20)
+//				.padding(.bottom, 20)
 				.foregroundStyle(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
 				.background(.white)
 				.cornerRadius(20, corners: [.topLeft, .topRight])
